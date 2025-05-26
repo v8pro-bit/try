@@ -9,30 +9,28 @@
 <body>
   <header>
     <h1 class="site-title">
-      <a href="https://v2.streameast.beauty/" target="_blank">STREAMEAST</a>
+      <a href="/">STREAMEAST</a>
     </h1>
 
     <div class="divider"></div>
 
     <div class="league-bar">
-      <a href="https://v2.streameast.beauty/p/mma.html">MMA Streams</a>
-      <a href="https://v2.streameast.beauty/p/boxing.html">BOXING Streams</a>
-      <a href="https://v2.streameast.beauty/p/other.html">Other Streams</a>
-      <a href="https://v2.streameast.beauty/p/nba.html">NBA Streams</a>
-      <a href="https://v2.streameast.beauty/p/cfb.html">CFB Streams</a>
-      <a href="https://v2.streameast.beauty/p/ncaab.html">NCAAB Streams</a>
-      <a href="https://v2.streameast.beauty/p/wwe.html">WWE Streams</a>
-      <a href="https://v2.streameast.beauty/p/mls.html">MLS Streams</a>
-      <a href="https://v2.streameast.beauty/p/nfl.html">NFL Streams</a>
-      <a href="https://v2.streameast.beauty/p/nhl.html">NHL Streams</a>
-      <a href="https://v2.streameast.beauty/p/mlb.html">MLB Streams</a>
+      <a href="/p/mma.html">MMA Streams</a>
+      <a href="/p/boxing.html">BOXING Streams</a>
+      <a href="/p/other.html">Other Streams</a>
+      <a href="/p/nba.html">NBA Streams</a>
+      <a href="/p/cfb.html">CFB Streams</a>
+      <a href="/p/ncaab.html">NCAAB Streams</a>
+      <a href="/p/wwe.html">WWE Streams</a>
+      <a href="/p/mls.html">MLS Streams</a>
+      <a href="/p/nfl.html">NFL Streams</a>
+      <a href="/p/nhl.html">NHL Streams</a>
+      <a href="/p/mlb.html">MLB Streams</a>
     </div>
   </header>
 
   <div class="main-container">
     <div class="matches">
-      <center></center>
-
       <div class="search-wrapper">
         <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
@@ -44,14 +42,9 @@
     </div>
 
     <div class="sidebar">
-      <!-- First Ad Box -->
       <div class="ad-box"></div>
-
-      <!-- Spacing between ads -->
       <div style="height: 20px;"></div>
-
       <center>
-        <!-- Second Ad Box with Fixed Size -->
         <div class="ad-box-fixed">
           <div class="ad-inner"></div>
         </div>
@@ -94,7 +87,7 @@
       const matches = await response.json();
 
       const container = document.getElementById('match-container');
-      matches.forEach(match => {
+      matches.forEach((match, i) => {
         const html = `
           <a href="${match.link}" class="match-card-link">
             <div class="match-card">
